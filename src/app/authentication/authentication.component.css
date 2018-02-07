@@ -1,20 +1,13 @@
 #ms-signin-button {
     width: 215px;
-    height: 40px;
+    height: auto;
     margin: 20px 0 0px 0px;
-    border: none;
+    padding: .8em;
     cursor: pointer;
-    display: inline-block;
     color: black;
-    text-align: center;
-    font-family:"Segoe UI","wf_segoe-ui_normal","Arial",sans-serif;
-    font-size: 15px;
-    background: url('http://graphstagingblobstorage.blob.core.windows.net/staging/vendor/bower_components/explorer/assets/images/MSSignInButton.png') no-repeat;
-    background-size: 100%;
 }
 
 .button-text {
-  padding-left: 20px;
 }
 
 #signout {

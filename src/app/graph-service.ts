@@ -19,10 +19,10 @@ export class GraphService {
         headers.append('Authorization', 'Bearer {token:https://graph.microsoft.com/}');
 
         if (queryType === 'GET') {
-            return this.http.get(`https://proxy.apisandbox.msdn.microsoft.com/svc?url=${encodeURIComponent(query)}`,
+            return this.http.get(`http://localhost:8005/svc?url=${encodeURIComponent(query)}`,
               {headers}).toPromise();
         } else if (queryType === 'GET_BINARY') {
-            return this.http.get(`https://proxy.apisandbox.msdn.microsoft.com/svc?url=${encodeURIComponent(query)}`,
+            return this.http.get(`http://localhost:8005/svc?url=${encodeURIComponent(query)}`,
               {headers, responseType: ResponseContentType.ArrayBuffer}).toPromise();
         }
     }

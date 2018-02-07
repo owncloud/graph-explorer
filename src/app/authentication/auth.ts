@@ -11,13 +11,13 @@ import { PermissionScopes } from '../scopes-dialog/scopes';
 import { getParameterByName, getGraphUrl } from '../util';
 
 export function initAuth(options: IExplorerOptions, apiService: GraphService, changeDetectorRef: ChangeDetectorRef) {
-  setInterval(refreshAccessToken, 1000 * 60 * 10); // refresh access token every 10 minutes
+  setInterval(refreshAccessToken, 1000 * 60 * 1); // refresh access token every minute
   hello.init({
     msft: {
       oauth: {
         version: 2,
-        auth: options.AuthUrl + '/common/oauth2/v2.0/authorize',
-        grant: options.AuthUrl + '/common/oauth2/v2.0/token',
+        auth: options.AuthUrl + '/signin/v1/identifier/_/authorize',
+        grant: options.AuthUrl + '/konnect/v1/token',
       },
       scope_delim: ' ',
 
@@ -27,8 +27,8 @@ export function initAuth(options: IExplorerOptions, apiService: GraphService, ch
     }, msft_admin_consent: {
       oauth: {
         version: 2,
-        auth: options.AuthUrl + '/common/adminconsent',
-        grant: options.AuthUrl + '/common/oauth2/v2.0/token',
+        auth: options.AuthUrl + '/signin/v1/identifier/_/authorize',
+        grant: options.AuthUrl + '/konnect/v1/token',
       },
       scope_delim: ' ',
 
@@ -61,8 +61,8 @@ export function initAuth(options: IExplorerOptions, apiService: GraphService, ch
       try {
         let user = {};
 
-        const userInfoUrl = `${getGraphUrl()}/v1.0/me`;
-        const userPictureUrl = `${getGraphUrl()}/beta/me/photo/$value`;
+        const userInfoUrl = `${getGraphUrl()}/v1/me`;
+        const userPictureUrl = `${getGraphUrl()}/v1/me/photo/$value`;
 
         const userInfo = await apiService.performQuery('GET', userInfoUrl);
         const jsonUserInfo = userInfo.json();
@@ -184,7 +184,7 @@ export function getScopes() {
 
   // scopesStr is something like "Files.Read,Mail.Send,User.Read"
   if (!scopesStr) {
-    return;
+    return [];
   }
 
   const graphUrl = localStorage.getItem('GRAPH_URL');

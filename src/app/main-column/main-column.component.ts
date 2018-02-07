@@ -101,8 +101,10 @@ export class MainColumnComponent extends GraphExplorerComponent implements After
                 this.updateGraphVersionSelect();
                 event[0].subscribe({
                     onSelectionChanged: (method) => {
+                        /*
                         this.explorerValues.selectedVersion = document
                             .getElementById('-' + method.id).children[0].textContent as GraphApiVersion;
+                        */
                         this.updateEndpointURLVersionFromVersion();
                     },
                 });

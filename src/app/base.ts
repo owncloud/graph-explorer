@@ -25,8 +25,8 @@ export let Methods: RequestType[] = [
     'DELETE',
 ];
 
-export type GraphApiVersion = 'v1.0' | 'beta';
-export let GraphApiVersions: GraphApiVersion[] = ['v1.0', 'beta'];
+export type GraphApiVersion = 'v1' | 'beta';
+export let GraphApiVersions: GraphApiVersion[] = ['v1', 'beta'];
 
 export type AuthenticationStatus = 'anonymous' | 'authenticating' | 'authenticated';
 
@@ -260,7 +260,5 @@ export interface IMessageBarContent {
 }
 
 export let AllowedGraphDomains = [
-    'https://graph.microsoft.com',
-    'https://canary.graph.microsoft.com',
-    'https://microsoftgraph.chinacloudapi.cn',
+    'https://mose4:8428',
 ];

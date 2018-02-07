@@ -38,7 +38,6 @@ declare let moment;
 `],
 })
 export class AppComponent extends GraphExplorerComponent implements OnInit, AfterViewInit {
-
     public static messageBarContent: IMessageBarContent;
     public static _changeDetectionRef: ChangeDetectorRef; // tslint:disable-line
     public static message: IMessage;
@@ -46,16 +45,15 @@ export class AppComponent extends GraphExplorerComponent implements OnInit, Afte
     public static Options: IExplorerOptions = {
         ClientId: '',
         Language: 'en-US',
-        DefaultUserScopes: 'openid profile User.ReadWrite User.ReadBasic.All Sites.ReadWrite.All Contacts.ReadWrite ' +
-            'People.Read Notes.ReadWrite.All Tasks.ReadWrite Mail.ReadWrite Files.ReadWrite.All Calendars.ReadWrite',
-        AuthUrl: 'https://login.microsoftonline.com',
+        DefaultUserScopes: 'openid profile email kopano/gc',
+        AuthUrl: 'https://mose4:8443',
         GraphVersions: GraphApiVersions,
         PathToBuildDir: '',
     };
 
     public static explorerValues: IExplorerValues = {
         selectedOption: getParameterByName('method') as RequestType || 'GET',
-        selectedVersion: getParameterByName('version') as GraphApiVersion || 'v1.0',
+        selectedVersion: getParameterByName('version') as GraphApiVersion || 'v1',
         authentication: {
             user: {},
         },
@@ -100,9 +98,6 @@ export class AppComponent extends GraphExplorerComponent implements OnInit, Afte
                 setTimeout(refreshAceEditorsContent, 0);
             });
         }
-
-        parseMetadata(this.GraphService, 'v1.0');
-        parseMetadata(this.GraphService, 'beta');
     }
 
     public getLocalisedString(message: string): string {
@@ -139,17 +134,6 @@ export class AppComponent extends GraphExplorerComponent implements OnInit, Afte
 
         // Set explorer state that depends on configuration
         AppComponent.explorerValues.endpointUrl = getGraphUrl()
-            + `/${(getParameterByName('version') || 'v1.0')}/${getParameterByName('request') || 'me/'}`;
-
-        // Show the Microsoft Graph TOU when we load GE.
-        AppComponent.messageBarContent = {
-            text: this.getLocalisedString('use the Microsoft Graph API') +
-                '<br><br><a class=\'link\' href=\'https://aka.ms/msgraphtou\' ' +
-                'target=\'_blank\'>' + this.getLocalisedString('Terms of use') + '</a><br>' +
-                '<a class=\'link\' href=\'https://go.microsoft.com/fwlink/?LinkId=521839\'' +
-                ' target=\'_blank\'>' + this.getLocalisedString('Microsoft Privacy Statement') + '</a>.',
-            backgroundClass: 'ms-MessageBar--warning',
-            icon: 'none',
-        };
+            + `/${(getParameterByName('version') || 'v1')}/${getParameterByName('request') || 'me/'}`;
     }
 }
