@@ -260,5 +260,5 @@ export interface IMessageBarContent {
 }
 
 export let AllowedGraphDomains = [
-  window['GraphUrl'] ? new URL(window['GraphUrl']).origin : window.origin, // tslint:disable-line
+  window['GraphUrl'] ? new URL(window['GraphUrl']).origin : window.location.origin, // tslint:disable-line
 ];

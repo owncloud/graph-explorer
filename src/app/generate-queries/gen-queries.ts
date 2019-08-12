@@ -278,7 +278,7 @@ export const SampleQueries: ISampleQuery[] = [
     "category": "Outlook Calendar",
     "method": "GET",
     "humanName": "my events for the next week",
-    "requestUrl": "/v1/me/calendarview?startdatetime={today}&enddatetime={next-week}",
+    "requestUrl": "/v1/me/calendarView?startDateTime={today}&endDateTime={next-week}",
     "docLink": "https://developer.microsoft.com/en-us/graph/docs/api-reference/v1/api/user_list_calendarview",
     "skipTest": false
 },

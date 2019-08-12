@@ -17,6 +17,10 @@ RUN npm install
 
 COPY . .
 
+RUN npm run build && \
+    cat file-utility.js|head -n -3|grep -v 'const watcher =' > copy-files.js && \
+    node copy-files
+
 RUN ln -sv /tmp/secrets.js && ln -sv /tmp/config.js
 
 USER nobody:nogroup

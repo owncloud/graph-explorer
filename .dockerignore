@@ -4,3 +4,5 @@ dist
 www
 config.js
 secrets.js
+src/compiler-output
+src/aot

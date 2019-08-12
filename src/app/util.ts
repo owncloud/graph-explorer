@@ -39,5 +39,5 @@ export function getGraphUrl() {
     if (graphUrl) {
         return graphUrl;
     }
-    return window['GraphUrl'] ? window['GraphUrl'] : window.origin + '/api/gc'; // tslint:disable-line
+    return window['GraphUrl'] ? window['GraphUrl'] : window.location.origin + '/api/gc'; // tslint:disable-line
 }

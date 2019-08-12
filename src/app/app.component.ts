@@ -46,7 +46,7 @@ export class AppComponent extends GraphExplorerComponent implements OnInit, Afte
         ClientId: '',
         Language: 'en-US',
         DefaultUserScopes: 'openid profile email kopano/gc',
-        AuthUrl: window['Iss'] ? window['Iss'] : window.origin, // tslint:disable-line
+        AuthUrl: window['Iss'] ? window['Iss'] : window.location.origin, // tslint:disable-line
         GraphVersions: GraphApiVersions,
         PathToBuildDir: '',
     };
