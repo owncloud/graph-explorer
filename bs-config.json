@@ -6,7 +6,8 @@
       "/bower_components": "bower_components",
       "/assets": "assets",
       "/dist": "dist",
-      "/secrets.js": "secrets.js"
+      "/secrets.js": "secrets.js",
+      "/config.js": "config.js"
     }
   },
   "watchOptions": {

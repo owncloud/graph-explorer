@@ -1,0 +1,3 @@
+window.Iss = "";
+window.GraphUrl = "";
+

@@ -1,6 +1,7 @@
 node_modules/
 npm-debug.log*
 secrets.js
+config.js
 fonts/
 debug.log
 

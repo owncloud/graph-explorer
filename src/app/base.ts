@@ -260,5 +260,5 @@ export interface IMessageBarContent {
 }
 
 export let AllowedGraphDomains = [
-    'https://mose4:8428',
+  window['GraphUrl'] ? new URL(window['GraphUrl']).origin : window.origin, // tslint:disable-line
 ];

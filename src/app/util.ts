@@ -39,5 +39,5 @@ export function getGraphUrl() {
     if (graphUrl) {
         return graphUrl;
     }
-    return 'https://mose4:8428/api/gc';
+    return window['GraphUrl'] ? window['GraphUrl'] : window.origin + '/api/gc'; // tslint:disable-line
 }
