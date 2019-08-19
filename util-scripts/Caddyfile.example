@@ -1,0 +1,24 @@
+*:3000 {
+    errors stderr
+
+    root www
+
+    redir 301 {
+        if {path} is /
+        /grapi-explorer/explorer/
+    }
+}
+
+*:3000/grapi-explorer {
+    errors stderr
+
+    root www
+
+    redir 301 {
+        if {path} is /grapi-explorer
+        if {path} is /grapi-explorer/
+        if_op or
+        /grapi-explorer/explorer/
+    }
+}
+
