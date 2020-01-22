@@ -1,6 +1,6 @@
-# GRAPI Explorer
+# OCIS Explorer
 
-This is a Kopano fork of the Microsoft Graph Explorer so it can be used with a self hosted Kopano GRAPI.
+This is an ownCloud fork of the Microsoft Graph Explorer so it can be used with a self hosted OCIS Graph API.
 
 ## Technology.
 
@@ -16,7 +16,7 @@ The Graph Explorer is written in [TypeScript](https://www.typescriptlang.org/) a
 
 ## Configuration
 
-* You will need to setup Konnect to allow your explorer as a trusted web client. You don't need a client secret since the explorer is a single page application. Rename `secrets.sample.js` to `secrects.js` and `config.sample.js` to `config.js` and insert your client ID, Iss and URL to GRAPI.
+* You will need to setup Konnect to allow your explorer as a trusted web client. You don't need a client secret since the explorer is a single page application. Rename `secrets.sample.js` to `secrects.js` and `config.sample.js` to `config.js` and insert your client ID, Iss and URL to OCIS.
 
 ## Copyright
 
