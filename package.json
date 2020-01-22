@@ -1,7 +1,7 @@
 {
-  "name": "microsoft-graph-explorer",
+  "name": "ocis-graph-explorer",
   "version": "1.7.10",
-  "description": "Microsoft Graph Explorer",
+  "description": "ownCloud Infinite Scale Graph Explorer",
   "scripts": {
     "build": "tsc -p src/",
     "build:watch": "npm run build -- -w",
@@ -61,13 +61,5 @@
     "rxjs": "^5.4.0",
     "systemjs": "^0.19.27",
     "zone.js": "^0.8.5"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/microsoftgraph/microsoft-graph-explorer.git"
-  },
-  "bugs": {
-    "url": "https://github.com/microsoftgraph/microsoft-graph-explorer/issues"
-  },
-  "homepage": "https://github.com/microsoftgraph/microsoft-graph-explorer#readme"
+  }
 }

@@ -45,7 +45,7 @@ export class AppComponent extends GraphExplorerComponent implements OnInit, Afte
     public static Options: IExplorerOptions = {
         ClientId: '',
         Language: 'en-US',
-        DefaultUserScopes: 'openid profile email kopano/gc',
+        DefaultUserScopes: 'openid profile email',
         AuthUrl: window['Iss'] ? window['Iss'] : window.location.origin, // tslint:disable-line
         GraphVersions: GraphApiVersions,
         PathToBuildDir: '',
