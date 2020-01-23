@@ -14,7 +14,8 @@
     "import:samples": "node util-scripts\\query-importer.js",
     "import:loc-strings": "node util-scripts\\bundle-loc-files.js",
     "rollup": "rollup -c rollup-config.js",
-    "lint": "tslint --project src/tsconfig.json -c tslint.json"
+    "lint": "tslint --project src/tsconfig.json -c tslint.json",
+    "release": "tar -czf release.tar.gz dist index.html node_modules/hellojs/dist/hello.all.js src/custom.css node_modules/core-js/client/shim.min.js node_modules/zone.js/dist/zone.js node_modules/systemjs/dist/system.src.js node_modules/moment/min/moment-with-locales.min.js"
   },
   "author": "",
   "devDependencies": {

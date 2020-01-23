@@ -172,7 +172,8 @@ def buildExplorer():
 		'image': 'owncloudci/nodejs:10',
 		'pull': 'always',
 		'commands': [
-			'npm run build:prod'
+			'npm run build:prod',
+			'npm run release'
 		]
 	}]
 
@@ -188,6 +189,7 @@ def buildRelease(ctx):
 				},
 				'files': [
 					'dist/*',
+					'release.tar.gz'
 				],
 				'checksum': [
 					'md5',
