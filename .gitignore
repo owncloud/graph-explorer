@@ -4,6 +4,7 @@ secrets.js
 config.js
 fonts/
 debug.log
+release*
 
 scripts/*.js
 scripts/*.js.map
