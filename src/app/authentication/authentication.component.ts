@@ -33,7 +33,7 @@ export class AuthenticationComponent extends GraphExplorerComponent {
   public login() {
     const loginProperties = {
       display: 'page',
-      response_type: 'code',
+      response_type: 'token',
       response_mode: 'fragment',
       nonce: 'graph_explorer',
       prompt: 'select_account',
