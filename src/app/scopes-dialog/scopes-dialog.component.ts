@@ -169,7 +169,7 @@ export class ScopesDialogComponent extends GraphExplorerComponent implements Aft
     // @todo type HelloJSLoginOptions
     const loginProperties = {
       display: 'page',
-      response_type: 'code',
+      response_type: 'token',
       nonce: 'graph_explorer',
       prompt: 'select_account',
       /* Login hint not applied via AppComponent.explorerValues.authentication.user.emailAddress

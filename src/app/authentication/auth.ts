@@ -16,10 +16,8 @@ export function initAuth(options: IExplorerOptions, apiService: GraphService, ch
     msft: {
       oauth: {
         version: 2,
-        auth: options.AuthUrl + '/oauth2/auth',
-        grant: options.AuthUrl + '/oauth2/token',
-        // auth: options.AuthUrl + '/signin/v1/identifier/_/authorize',
-        // grant: options.AuthUrl + '/konnect/v1/token',
+        auth: options.AuthUrl + '/signin/v1/identifier/_/authorize',
+        grant: options.AuthUrl + '/konnect/v1/token',
       },
       scope_delim: ' ',
 
@@ -127,7 +125,7 @@ export function refreshAccessToken() {
 
   const loginProperties = {
     display: 'none',
-    response_type: 'code',
+    response_type: 'token',
     response_mode: 'fragment',
     nonce: 'graph_explorer',
     prompt: 'none',
