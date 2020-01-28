@@ -61,8 +61,8 @@ export function initAuth(options: IExplorerOptions, apiService: GraphService, ch
       try {
         let user = {};
 
-        const userInfoUrl = `${getGraphUrl()}/v1/me`;
-        const userPictureUrl = `${getGraphUrl()}/v1/me/photo/$value`;
+        const userInfoUrl = `${getGraphUrl()}/v1.0/me`;
+        const userPictureUrl = `${getGraphUrl()}/v1.0/me/photo/$value`;
 
         const userInfo = await apiService.performQuery('GET', userInfoUrl);
         const jsonUserInfo = userInfo.json();

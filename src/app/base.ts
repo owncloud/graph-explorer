@@ -25,8 +25,8 @@ export let Methods: RequestType[] = [
     'DELETE',
 ];
 
-export type GraphApiVersion = 'v1' | 'beta';
-export let GraphApiVersions: GraphApiVersion[] = ['v1', 'beta'];
+export type GraphApiVersion = 'v1.0' | 'beta';
+export let GraphApiVersions: GraphApiVersion[] = ['v1.0', 'beta'];
 
 export type AuthenticationStatus = 'anonymous' | 'authenticating' | 'authenticated';
 

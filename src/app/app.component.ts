@@ -53,7 +53,7 @@ export class AppComponent extends GraphExplorerComponent implements OnInit, Afte
 
     public static explorerValues: IExplorerValues = {
         selectedOption: getParameterByName('method') as RequestType || 'GET',
-        selectedVersion: getParameterByName('version') as GraphApiVersion || 'v1',
+        selectedVersion: getParameterByName('version') as GraphApiVersion || 'v1.0',
         authentication: {
             user: {},
         },
@@ -134,6 +134,6 @@ export class AppComponent extends GraphExplorerComponent implements OnInit, Afte
 
         // Set explorer state that depends on configuration
         AppComponent.explorerValues.endpointUrl = getGraphUrl()
-            + `/${(getParameterByName('version') || 'v1')}/${getParameterByName('request') || 'me/'}`;
+            + `/${(getParameterByName('version') || 'v1.0')}/${getParameterByName('request') || 'me/'}`;
     }
 }
