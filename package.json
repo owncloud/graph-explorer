@@ -25,7 +25,7 @@
     "@types/jquery": "^2.0.40",
     "chokidar": "^2.0.4",
     "concurrently": "^3.2.0",
-    "fast-csv": "2.4.0",
+    "fast-csv": "4.3.6",
     "husky": "^1.1.2",
     "jasmine-core": "^2.6.1",
     "jquery": "^3.4.0",
