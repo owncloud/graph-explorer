@@ -25,7 +25,7 @@ function isSpecFile(path) {
 function isBuiltFile(path) {
   return isJsFile(path) &&
          builtPaths.reduce(function(keep, bp) {
-           return keep || (path.substr(0, bp.length) === bp);
+           return keep || (path.slice(0, bp.length) === bp);
          }, false);
 }
 
