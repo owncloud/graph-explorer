@@ -47,14 +47,14 @@ export function handleTextResponse(results) {
 }
 
 export function isImageResponse(contentType: string) {
-    return contentType === 'application/octet-stream' || contentType.substr(0, 6) === 'image/';
+    return contentType === 'application/octet-stream' || contentType.slice(0, 6) === 'image/';
 }
 
 export function getContentType(headers: Headers) {
     const full = headers.get('content-type');
     const delimiterPos = full.indexOf(';');
     if (delimiterPos !== -1) {
-        return full.substr(0, delimiterPos);
+        return full.slice(0, delimiterPos);
     } else {
         return full;
     }
@@ -143,7 +143,7 @@ const formatXml = (xml) => {
             return results;
         })()).join('');
         if (fromTo === 'opening->closing') {
-            formatted = formatted.substr(0, formatted.length - 1) + ln + '\n';
+            formatted = formatted.slice(0, -1) + ln + '\n';
         } else {
             formatted += padding + ln + '\n';
         }

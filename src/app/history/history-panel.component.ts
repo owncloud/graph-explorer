@@ -70,7 +70,7 @@ export class HistoryPanelComponent extends GraphExplorerComponent implements OnI
     public exportQuery(query: IGraphApiCall) {
       const blob = new Blob([query.har], { type: 'text/json' });
 
-      const url = query.requestUrl.substr(8).split('/');
+      const url = query.requestUrl.slice(8).split('/');
       url.pop(); // Removes leading slash
 
       const filename = `${url.join('_')}.har`;

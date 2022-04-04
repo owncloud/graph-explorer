@@ -112,7 +112,7 @@ export class AppComponent extends GraphExplorerComponent implements OnInit, Afte
             }
         }
 
-        const hash = location.hash.substr(1);
+        const hash = location.hash.slice(1);
         if (hash.includes('mode')) {
             const mode = 'canary';
             localStorage.setItem('GRAPH_MODE', JSON.stringify(mode));
